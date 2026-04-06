@@ -58,7 +58,7 @@ We believe the best software runs locally, respects your privacy by default, and
 
 | Project | What it does | Status |
 |---|---|---|
-| [PulseEngine Platform](https://github.com/PulseEngine/le_Market_Intelligence_Platform) | Real-time market intelligence. Runs entirely on your machine. | ![Active](https://img.shields.io/badge/-Active-22c55e?style=flat-square) |
+| [PulseEngine Platform](https://github.com/The-Pulse-Engine/Pulse-Engine_Market_Intelligence_Platform) | Real-time market intelligence. Runs entirely on your machine. | ![Active](https://img.shields.io/badge/-Active-22c55e?style=flat-square) |
 | More coming | Local-first tools across finance, data, and beyond | ![Soon](https://img.shields.io/badge/-Soon-a16207?style=flat-square) |
 
 ---
@@ -119,8 +119,7 @@ Full roadmap in [Docs/ROADMAP.md](https://github.com/PulseEngine/le_Market_Intel
 
 We are small right now. We will not be for long.
 
-[![Discord](https://img.shields.io/badge/Discord-Join%20the%20community-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/yourlink)
-[![Medium](https://img.shields.io/badge/Medium-Weekly%20articles-000000?style=flat-square&logo=medium&logoColor=white)](https://medium.com/pulseengine)
+[![Discord](https://img.shields.io/badge/Discord-Join%20PulseEngine-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/kYK4skPu7m)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Follow%20updates-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourprofile)
 
 If you have ever wanted powerful tools that ask nothing of you in return, you are already thinking like us.
