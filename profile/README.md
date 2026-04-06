@@ -120,7 +120,7 @@ Full roadmap in [Docs/ROADMAP.md](https://github.com/PulseEngine/le_Market_Intel
 We are small right now. We will not be for long.
 
 [![Discord](https://img.shields.io/badge/Discord-Join%20PulseEngine-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/kYK4skPu7m)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Follow%20updates-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourprofile)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Follow%20updates-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/the-pulse-engine/?viewAsMember=true)
 
 If you have ever wanted powerful tools that ask nothing of you in return, you are already thinking like us.
 
