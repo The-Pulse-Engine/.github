@@ -1,0 +1,46 @@
+name: Update project table
+
+on:
+  schedule:
+    - cron: "17 5 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/scripts/update_projects.py"
+      - ".github/workflows/update-projects.yml"
+
+permissions: {}
+
+concurrency:
+  group: update-projects
+  cancel-in-progress: false
+
+jobs:
+  update:
+    name: Rebuild the table from public repositories
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Self-test
+        run: python3 .github/scripts/update_projects.py --self-test
+
+      - name: Rebuild the table
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 .github/scripts/update_projects.py
+
+      - name: Commit if the table changed
+        run: |
+          if git diff --quiet -- profile/README.md; then
+            echo "The table is already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile/README.md
+          git commit -m "Update the project table"
+          git push
