@@ -27,6 +27,7 @@ Write it with whatever editor or AI assistant you like. When you open a pull req
 <!-- projects:start -->
 | Project | What it does | Language | Stars | Last commit | Status |
 |---|---|---|---|---|---|
+| [**Ephemeral-clipboard**](https://github.com/The-Pulse-Engine/Ephemeral-clipboard) | Send a secret from one computer to another. End-to-end encrypted, read once, then gone. Short word codes secured by SPAKE2, a RAM-only relay that never sees your data, and auto-clear of the clipboard. Python, Windows and Linux. | Mixed | ![Stars](https://img.shields.io/github/stars/The-Pulse-Engine/Ephemeral-clipboard?style=flat-square&label=&color=2A2A2A) | ![Last commit](https://img.shields.io/github/last-commit/The-Pulse-Engine/Ephemeral-clipboard?style=flat-square&label=&color=2A2A2A) | ![Active](https://img.shields.io/badge/-Active-E8760A?style=flat-square) |
 | [**API-Cupboard**](https://github.com/The-Pulse-Engine/API-Cupboard) | A local API cupboard for your laptop. Store all API keys once in the OS keychain and use them in any project through env injection or a localhost proxy. No .env files. Go, single binary, Windows and Linux. | Go | ![Stars](https://img.shields.io/github/stars/The-Pulse-Engine/API-Cupboard?style=flat-square&label=&color=2A2A2A) | ![Last commit](https://img.shields.io/github/last-commit/The-Pulse-Engine/API-Cupboard?style=flat-square&label=&color=2A2A2A) | ![Active](https://img.shields.io/badge/-Active-E8760A?style=flat-square) |
 
 <sub>Updated daily from our public repositories.</sub>
