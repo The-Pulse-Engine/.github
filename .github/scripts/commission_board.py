@@ -1,7 +1,7 @@
 """Keep the Discord commission board in sync with open issues on the org's active projects.
 
 A project is active while its repository is public, not archived, not a fork and not a template.
-Its close date is the due date of its earliest open milestone.
+Its close date is the latest due date among its open milestones.
 
 Usage:
   python .github/scripts/commission_board.py                # edit the board message
@@ -79,7 +79,7 @@ def fetch():
         name = repo["name"]
         issues = [i for i in github(f"/repos/{ORG}/{name}/issues?state=open&per_page=100") if "pull_request" not in i]
         milestones = github(f"/repos/{ORG}/{name}/milestones?state=open&sort=due_on&direction=asc")
-        due = next((m["due_on"] for m in milestones if m.get("due_on")), None)
+        due = max((m["due_on"] for m in milestones if m.get("due_on")), default=None)  # the last milestone is the close date
         projects.append({"repo": repo, "issues": issues, "due": due})
     return projects
 
