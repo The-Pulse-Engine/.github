@@ -12,15 +12,15 @@
   <img src="https://img.shields.io/badge/License-MIT-E8760A?style=flat-square&labelColor=0D0D0D" alt="MIT licensed">
 </p>
 
-PulseEngine is an open-source developer community. Students, hobbyists and working engineers build MIT-licensed software together, in public. We build around two ideas.
+PulseEngine is an open-source developer community. Everything we make is MIT licensed, and all of it follows two ideas.
 
 ### 1. Make it run well on a laptop first
 
-An ordinary laptop is the starting point. Code that runs well there is lean code, and the cloud can then scale it further instead of making up for it.
+We optimise on an ordinary laptop and scale in the cloud. If something is slow on your own machine, we fix the code before we add servers.
 
 ### 2. Be able to explain your code
 
-Use any editor, any AI assistant, any tool you like. A good developer can walk others through how their code works, and we help each other get there. Every pull request comes with a short explanation in plain words.
+Write it with whatever editor or AI assistant you like. When you open a pull request, say in plain words what the code does and why it works. If you get stuck explaining something, ask in Discord.
 
 ## Projects
 
@@ -29,15 +29,12 @@ Use any editor, any AI assistant, any tool you like. A good developer can walk o
 |---|---|---|---|---|---|
 | [**API-Cupboard**](https://github.com/The-Pulse-Engine/API-Cupboard) | A local API cupboard for your laptop. Store all API keys once in the OS keychain and use them in any project through env injection or a localhost proxy. No .env files. Go, single binary, Windows and Linux. | Go | ![Stars](https://img.shields.io/github/stars/The-Pulse-Engine/API-Cupboard?style=flat-square&label=&color=2A2A2A) | ![Last commit](https://img.shields.io/github/last-commit/The-Pulse-Engine/API-Cupboard?style=flat-square&label=&color=2A2A2A) | ![Active](https://img.shields.io/badge/-Active-E8760A?style=flat-square) |
 
-<sub>1 public project. This table rebuilds itself every day from the organisation's public repositories.</sub>
+<sub>Updated daily from our public repositories.</sub>
 <!-- projects:end -->
 
 ## How we work
 
-- All work happens in public. Commits, issues and design discussions are open from the first line of code.
-- The software collects no data. There is no telemetry and no account to create.
-- Everything is MIT licensed. Anyone can read, fork, change and share the code.
-- We share progress openly, slow weeks included. When an approach does not work, we write up what we learned.
+We work in public from the first commit, and design discussions happen where anyone can read them. Our software does not collect data or ask you to make an account. We post a recap every week, including the slow ones, and when an approach fails we write down why.
 
 ## Get involved
 
@@ -50,7 +47,3 @@ Anyone can contribute, from first-year students to working engineers. A clear bu
 ## Say hello
 
 Day-to-day talk happens on [Discord](https://discord.gg/VU8RUByEeG). Weekly recaps go out on [LinkedIn](https://www.linkedin.com/company/the-pulse-engine/). For sponsorship, hiring or press, use the [contact section on our website](https://the-pulse-engine-website.bhargavaramkrishnapur.workers.dev/#contact).
-
-<p align="center">
-  <sub>Built to run on your laptop. Written to be explained.</sub>
-</p>

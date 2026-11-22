@@ -1,6 +1,6 @@
 {
   "name": "PulseEngine laptop check (Python)",
-  "description": "Install and test a Python project on Windows, macOS and Linux, the machines contributors actually use.",
+  "description": "Install and test a Python project on Windows, macOS and Linux.",
   "iconName": "pulseengine",
   "categories": ["Python"],
   "filePatterns": ["requirements\\.txt$", "pyproject\\.toml$"]

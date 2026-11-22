@@ -1,6 +1,6 @@
 {
   "name": "PulseEngine laptop check (Go)",
-  "description": "Build, vet and test a Go project on Windows, macOS and Linux, the machines contributors actually use.",
+  "description": "Build, vet and test a Go project on Windows, macOS and Linux.",
   "iconName": "pulseengine",
   "categories": ["Go"],
   "filePatterns": ["go.mod$"]

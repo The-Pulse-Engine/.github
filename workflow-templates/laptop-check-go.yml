@@ -1,6 +1,6 @@
 name: Laptop check
 
-# Builds and tests on the three systems contributors actually use.
+# Builds and tests on Windows, macOS and Linux.
 on:
   push:
     branches: [$default-branch]

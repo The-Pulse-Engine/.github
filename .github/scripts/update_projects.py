@@ -52,7 +52,7 @@ def render(repos, now):
     rows.sort(key=lambda r: r["pushed_at"], reverse=True)
     rows.sort(key=lambda r: bool(r.get("archived")))  # stable sort: archived repos go last
     if not rows:
-        return "The first public project is on its way. Watch this space or join the Discord."
+        return "No public projects yet. Ask in the Discord to see what is in progress."
     out = [
         "| Project | What it does | Language | Stars | Last commit | Status |",
         "|---|---|---|---|---|---|",
@@ -68,9 +68,8 @@ def render(repos, now):
             f"| ![Last commit]({SHIELD.format(kind='last-commit', org=ORG, repo=name)}) "
             f"| ![{label}]({badge}) |"
         )
-    word = "project" if len(rows) == 1 else "projects"
     out.append("")
-    out.append(f"<sub>{len(rows)} public {word}. This table rebuilds itself every day from the organisation's public repositories.</sub>")
+    out.append("<sub>Updated daily from our public repositories.</sub>")
     return "\n".join(out)
 
 
@@ -96,8 +95,8 @@ def self_test():
     assert "-Active-" in lines[0] and "-Quiet-" in lines[1] and "-Archived-" in lines[2]
     assert "a \\| b c" in lines[1] and "| Mixed |" in lines[1]
     assert "Description coming soon." in lines[0]
-    assert "3 public projects" in table
-    assert "on its way" in render([], now)
+    assert "Updated daily" in table
+    assert "No public projects yet" in render([], now)
     doc = f"top\n{START}\nold\n{END}\nbottom"
     new = replace_block(doc, "X")
     assert new == f"top\n{START}\nX\n{END}\nbottom"
