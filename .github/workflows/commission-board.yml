@@ -1,0 +1,42 @@
+name: Commission board
+
+# Edits one Discord message with the open issues on every active project.
+# Off-minute times, because GitHub drops top-of-hour schedules more often.
+on:
+  schedule:
+    - cron: "7,22,37,52 * * * *"
+    - cron: "11 9 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/scripts/commission_board.py"
+      - ".github/workflows/commission-board.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: commission-board
+  cancel-in-progress: true
+
+jobs:
+  board:
+    name: Update the board
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Self-test
+        run: python3 .github/scripts/commission_board.py --self-test
+
+      - name: Update the board
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DISCORD_BOARD_WEBHOOK: ${{ secrets.DISCORD_BOARD_WEBHOOK }}
+          DISCORD_STAFF_WEBHOOK: ${{ secrets.DISCORD_STAFF_WEBHOOK }}
+          BOARD_MESSAGE_ID: ${{ vars.BOARD_MESSAGE_ID }}
+          # The daily run also warns staff when fewer than two projects are open.
+          STAFF_FLAG: ${{ github.event.schedule == '11 9 * * *' && '--staff-check' || '' }}
+        run: python3 .github/scripts/commission_board.py $STAFF_FLAG
